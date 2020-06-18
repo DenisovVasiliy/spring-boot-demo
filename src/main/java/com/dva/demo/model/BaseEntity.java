@@ -12,8 +12,6 @@ public class BaseEntity {
     @Column
     private boolean deleted;
 
-
-
     public Long getId() {
         return id;
     }

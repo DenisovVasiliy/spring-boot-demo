@@ -33,7 +33,7 @@ public class StudentConverter {
         student.setId(studentDto.getId());
         student.setFirstName(studentDto.getFirstName());
         student.setLastName(studentDto.getLastName());
-        if(studentDto.getGroup() != null) {
+        if (studentDto.getGroup() != null) {
             student.setGroup(groupConverter.toEntity(studentDto.getGroup()));
         }
         student.setDeleted(studentDto.isDeleted());

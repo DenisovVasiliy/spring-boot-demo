@@ -38,6 +38,7 @@ public class Student extends BaseEntity {
     public void setGroup(Group group) {
         this.group = group;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

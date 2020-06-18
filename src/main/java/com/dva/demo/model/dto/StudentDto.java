@@ -1,7 +1,5 @@
 package com.dva.demo.model.dto;
 
-import com.dva.demo.model.Group;
-
 public class StudentDto {
     private Long id;
     private String firstName;

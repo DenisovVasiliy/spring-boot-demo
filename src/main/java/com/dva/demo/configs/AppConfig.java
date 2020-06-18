@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = {"com.dva.demo.repository"}, repositoryBaseClass = ParentEntityRepositoryImpl.class)
+@EnableJpaRepositories(basePackages = {"com.dva.demo.repository"},
+        repositoryBaseClass = ParentEntityRepositoryImpl.class)
 public class AppConfig {
 }
