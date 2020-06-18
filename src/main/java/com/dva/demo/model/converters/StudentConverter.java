@@ -2,10 +2,12 @@ package com.dva.demo.model.converters;
 
 import com.dva.demo.model.Student;
 import com.dva.demo.model.dto.StudentDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class StudentConverter {
 
     private final GroupConverter groupConverter;
@@ -17,6 +19,7 @@ public class StudentConverter {
 
 
     public StudentDto toDto(Student student) {
+        log.debug("toDto({})", student);
         StudentDto studentDto = new StudentDto();
         studentDto.setId(student.getId());
         studentDto.setFirstName(student.getFirstName());
@@ -29,6 +32,7 @@ public class StudentConverter {
     }
 
     public Student toEntity(StudentDto studentDto) {
+        log.debug("toEntity({})", studentDto);
         Student student = new Student();
         student.setId(studentDto.getId());
         student.setFirstName(studentDto.getFirstName());
